@@ -14,4 +14,7 @@ import java.util.UUID;
 public class HotelSummaryResponse {
     private UUID id;
     private String name;
+    private String description;
+    private String address;
+    private String phone;
 }

@@ -1,9 +1,13 @@
 package com.example.TZRESTFullAPI.services.hotels;
 
-import com.example.TZRESTFullAPI.entities.Hotel;
-import com.example.TZRESTFullAPI.services.ServiceEntity;
+import com.example.TZRESTFullAPI.dtos.hotels.HotelResponse;
+import com.example.TZRESTFullAPI.dtos.hotels.HotelSummaryResponse;
 
+import java.util.List;
 import java.util.UUID;
 
-public interface HotelService  extends ServiceEntity<Hotel, UUID> {
+
+public interface HotelService {
+    HotelResponse findById(UUID uuid);
+    List<HotelSummaryResponse> findByAllSummary();
 }
