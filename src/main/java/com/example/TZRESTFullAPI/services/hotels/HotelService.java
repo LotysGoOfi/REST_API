@@ -1,4 +1,4 @@
-﻿package com.example.TZRESTFullAPI.services.hotels;
+package com.example.TZRESTFullAPI.services.hotels;
 
 import com.example.TZRESTFullAPI.entities.Hotel;
 import com.example.TZRESTFullAPI.services.ServiceEntity;

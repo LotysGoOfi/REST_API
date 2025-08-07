@@ -1,4 +1,4 @@
-﻿package com.example.TZRESTFullAPI.entities;
+package com.example.TZRESTFullAPI.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

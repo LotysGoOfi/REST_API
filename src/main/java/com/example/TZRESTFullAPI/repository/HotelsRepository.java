@@ -1,4 +1,4 @@
-﻿package com.example.TZRESTFullAPI.repository;
+package com.example.TZRESTFullAPI.repository;
 
 import com.example.TZRESTFullAPI.entities.Hotel;
 import org.springframework.data.jpa.repository.JpaRepository;

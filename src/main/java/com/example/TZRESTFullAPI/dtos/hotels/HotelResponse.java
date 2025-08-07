@@ -1,4 +1,4 @@
-﻿package com.example.TZRESTFullAPI.dtos.hotels;
+package com.example.TZRESTFullAPI.dtos.hotels;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
