@@ -1,5 +1,6 @@
 package com.example.TZRESTFullAPI.controllers;
 
+import com.example.TZRESTFullAPI.dtos.hotels.HotelRequest;
 import com.example.TZRESTFullAPI.dtos.hotels.HotelResponse;
 import com.example.TZRESTFullAPI.dtos.hotels.HotelSummaryResponse;
 
@@ -28,5 +29,11 @@ public class HostelController {
     @ResponseStatus(value = HttpStatus.OK)
     public HotelResponse findById(@PathVariable UUID id){
         return hotelService.findById(id);
+    }
+
+    @PostMapping("/hotels")
+    @ResponseStatus(value = HttpStatus.OK)
+    public HotelSummaryResponse createHotel(@RequestBody HotelRequest hotelRequest){
+        return hotelService.create(hotelRequest);
     }
 }

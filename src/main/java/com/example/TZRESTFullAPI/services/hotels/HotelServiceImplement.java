@@ -1,5 +1,6 @@
 package com.example.TZRESTFullAPI.services.hotels;
 
+import com.example.TZRESTFullAPI.dtos.hotels.HotelRequest;
 import com.example.TZRESTFullAPI.dtos.hotels.HotelResponse;
 import com.example.TZRESTFullAPI.dtos.hotels.HotelSummaryResponse;
 import com.example.TZRESTFullAPI.entities.Hotel;
@@ -49,8 +50,11 @@ public class HotelServiceImplement implements HotelService {
     }
 
 
-    public Hotel create(Hotel request) {
-        return hotelsRepository.save(request);
+    @Override
+    public HotelSummaryResponse create(HotelRequest request) {
+        Hotel hotel = hotelTransformer.toHotel(request);
+        Hotel save = hotelsRepository.save(hotel);
+        return hotelTransformer.toHotelSummaryResponse(save);
     }
 
     @Override

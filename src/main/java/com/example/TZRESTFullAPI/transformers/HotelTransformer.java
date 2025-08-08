@@ -1,5 +1,6 @@
 package com.example.TZRESTFullAPI.transformers;
 
+import com.example.TZRESTFullAPI.dtos.hotels.HotelRequest;
 import com.example.TZRESTFullAPI.dtos.hotels.HotelResponse;
 import com.example.TZRESTFullAPI.dtos.hotels.HotelSummaryResponse;
 import com.example.TZRESTFullAPI.entities.Embeddables.Address;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Component
 public class HotelTransformer {
@@ -36,6 +36,16 @@ public class HotelTransformer {
                 .address(formatAddress(hotel.getAddress()))
                 .phone(hotel.getContacts().getPhone())
                 .build();
+    }
+    public Hotel toHotel(HotelRequest hotelRequest) {
+        Hotel hotel = new Hotel();
+        hotel.setName(hotelRequest.getName());
+        hotel.setAddress(hotelRequest.getAddress());
+        hotel.setContacts(hotelRequest.getContacts());
+        hotel.setArrivalTime(hotelRequest.getArrivalTime());
+        hotel.setBrand(hotelRequest.getBrand());
+        hotel.setDescription(hotelRequest.getDescription());
+        return hotel;
     }
 
     public List<HotelSummaryResponse> toListHotelSummaryResponse(List<Hotel> hotels) {
