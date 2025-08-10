@@ -50,7 +50,6 @@
               - column:
                   name: check_out
                   type: varchar(10)
-
   - changeSet:
       id: 2
       author: dev
@@ -63,9 +62,9 @@
                   type: UUID
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_hotel_amenities_hotel
+                    foreignKeyName: fk_hotel_amenities
                     referencedTableName: hotel
                     referencedColumnNames: id
               - column:
-                  name: amenities
+                  name: amenity
                   type: varchar(255)

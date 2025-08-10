@@ -23,6 +23,7 @@ public class HotelResponse {
     private String name;
 
     private String description;
+
     private String brand;
 
     private Address address;

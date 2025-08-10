@@ -37,8 +37,9 @@ public class HotelTransformer {
                 .phone(hotel.getContacts().getPhone())
                 .build();
     }
+
     public Hotel toHotel(HotelRequest hotelRequest) {
-        Hotel hotel = new Hotel();
+        var hotel = new Hotel();
         hotel.setName(hotelRequest.getName());
         hotel.setAddress(hotelRequest.getAddress());
         hotel.setContacts(hotelRequest.getContacts());
@@ -49,7 +50,7 @@ public class HotelTransformer {
     }
 
     public List<HotelSummaryResponse> toListHotelSummaryResponse(List<Hotel> hotels) {
-        List<HotelSummaryResponse> hotelResponses  = new ArrayList<>();
+        var hotelResponses = new ArrayList<HotelSummaryResponse>();
         hotels.forEach(hotel -> hotelResponses.add(toHotelSummaryResponse(hotel)));
         return hotelResponses;
     }
