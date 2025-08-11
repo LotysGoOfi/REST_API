@@ -26,7 +26,7 @@ public class HostelController {
         return hotelService.findByAllSummary();
     }
 
-    @GetMapping("/hotels/{id}")
+    @GetMapping("/hostels/{id}")
     @ResponseStatus(value = HttpStatus.OK)
     public HotelResponse findById(@PathVariable UUID id){
         return hotelService.findById(id);
